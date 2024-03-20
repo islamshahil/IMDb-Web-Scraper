@@ -41,6 +41,8 @@ python imdb_movie_scraper.py
 
 - **Pagination**: You can specify the maximum number of pages to scrape. IMDb limits the number of results per page, and each page contains a maximum of 25 results. Therefore, pagination allows you to retrieve more search results.
 
+- **Unit Testing**: This repository contains unit tests script for the IMDb Movie Scraper, to run use the command  `python test_scraper.py`.
+
 - **Logging**: The scraper logs information about the scraping process, including errors, to a file named `scraper.log`. You can refer to this log file for troubleshooting or debugging purposes.
 
 - **Output Format**: The scraped movie data is saved to a JSON file with a filename based on the search query. Each movie's details are stored in JSON format, making it easy to parse and analyze the data programmatically.
