@@ -30,6 +30,13 @@ python imdb_movie_scraper.py
 
 5. The script will start scraping IMDb based on your input. Once the scraping is complete, it will save the scraped movie data to a JSON file.
 
+## User Input Explanation
+
+- **Enter Genre or Keyword**: The script prompts the user to enter a genre or keyword to search for movies on IMDb. This input helps the script customize the search based on the user's interests.
+
+- **Enter Maximum Number of Pages**: After entering the genre or keyword, the user is asked to specify the maximum number of pages to scrape. IMDb limits the number of results per page, with each page containing a maximum of 25 results. This input allows users to control the depth of the search results. They can enter a number between 0 and 25 to specify the number of pages to scrape. If the user enters 0, only the first page of search results will be scraped.
+
+
 ## Additional Information
 
 - **Pagination**: You can specify the maximum number of pages to scrape. IMDb limits the number of results per page, and each page contains a maximum of 25 results. Therefore, pagination allows you to retrieve more search results.
