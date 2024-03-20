@@ -115,9 +115,28 @@ def save_to_json(data, searchQuery):
         json.dump(data, f, indent=4)
     return file_path
 
+def get_user_input():
+    while True:
+        search_query = input("Enter genre or keyword to search (press Enter to quit): ")
+        if search_query:
+            return search_query
+        else:
+            break
+
+def get_pagination_input():
+    while True:
+        try:
+            pagination = int(input("Enter maximum number of pages to scrape (0 to 25): "))
+            if 0 <= pagination <= 25:
+                return pagination
+            else:
+                print("Pagination must be a number between 0 and 25.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
 if __name__ == "__main__":
-    searchQuery = input("Enter genre or keyword to search: ") # comedy
-    pagination = int(input("Enter maximum number of pages to scrape: ")) # 1
+    searchQuery = get_user_input() # comedy
+    pagination = get_pagination_input() # 1
     movies_data = scrape_imdb(searchQuery,pagination)
     if len(movies_data) > 0:
         file_path = save_to_json(movies_data,searchQuery)
