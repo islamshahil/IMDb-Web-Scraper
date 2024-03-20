@@ -140,6 +140,7 @@ if __name__ == "__main__":
     movies_data = scrape_imdb(searchQuery,pagination)
     if len(movies_data) > 0:
         file_path = save_to_json(movies_data,searchQuery)
+        print(f"Data saved to {file_path}")
         logging.info(f"Data saved to {file_path}")
 
 
